@@ -24,8 +24,8 @@ WORKDIR /app
 # Copiamos el JAR compilado desde la fase 'build' a la imagen final
 COPY --from=build /app/target/*.jar app.jar
 
-# Exponemos el puerto de Spring Boot (por defecto 8080)
-EXPOSE 8080
+# Cambiamos el puerto para evitar conflictos en Render
+EXPOSE 8081
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
