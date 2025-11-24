@@ -1,0 +1,243 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* 1. Estilos del Encabezado */
+.encabezado {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: flex; /* Permite alinear el logo y el título */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.logo-img {
+    padding: 1% 0%;
+     /* Define el ancho y el alto que deseas para el logo */
+    width: 150px; 
+    height: 150px; 
+    
+    /* Opcional: Esto asegura que la imagen se mantenga dentro del botón */
+    display: block; 
+    
+    /* Opcional: Asegura que la imagen no se distorsione al ajustarse */
+    object-fit: contain;     
+}
+
+/* Estilos del Logo-Botón */
+.logo-boton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 150px; 
+    height: 150px; 
+    font-size: 24px; /* Tamaño para que se vea como logo */
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    margin-right: 500px; /* Espacio entre el logo y el nombre */
+}
+
+.logo-boton:hover {
+    background-color: #3B82F6;
+    border-radius: 5px;
+}
+
+.close-btn {
+    /* Posiciona el botón en la esquina superior derecha del menú */
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px !important; /* Haz el ícono más grande */
+    margin: 0;
+    padding: 0 !important;
+    text-decoration: none;
+    color: #f1f1f1 !important; /* Color claro para contrastar con el fondo oscuro del menú */
+    transition: 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red !important; /* Color rojo al pasar el ratón */
+    background-color: transparent !important;
+    border-radius: 0 !important;
+}
+
+
+/* Estilos del Nombre de la Página */
+.titulo {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 3em;
+    font-weight: normal;
+    
+}
+
+
+
+
+/* 2. Estilos del Menú Lateral (Sidebar) */
+.sidebar {
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 250px; /* Ancho del menú */
+    position: fixed; /* Fijo en la pantalla, no se mueve al hacer scroll */
+    z-index: 10; /* Asegura que esté encima del resto del contenido */
+    top: 0;
+    left: -250px; /* **OCULTA** el menú fuera de la pantalla */
+    background-color: #D6A977;
+    overflow-x: hidden;
+    padding-top: 80px; /* Espacio para que el menú no quede bajo el encabezado */
+    transition: left 0.3s ease; /* Animación de desplazamiento */
+}
+
+/* Clase que se añade con JS para MOSTRAR el menú */
+.sidebar.open {
+    left: 0; /* Desplaza el menú para que se vea */
+}
+
+/* Estilos de los elementos del menú */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+    background-color: #2a2a2a;
+}
+
+/* Ajuste del contenido principal para evitar solapamiento */
+.content {
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+/* Opcional: Empujar el contenido principal cuando el menú está abierto */
+body.menu-open .content {
+    margin-left: 250px;
+}
+
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#busqueda {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+ 
+}
+
+.botones{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  height: 10vh;
+  margin: 0px 20px;
+  gap: 20px;
+}
+
+.boton {
+  display: inline-block; 
+  padding: 10px 10px; 
+  background-color: #3585db; 
+  color: white;
+  text-decoration: none; 
+  border-radius: 10px; 
+  border: none; 
+  cursor: pointer; /* Muestra un cursor */
+}
+
+.btn-accion{
+    padding: 5px 10px; 
+    margin: 0 2px;
+    background-color: #3585db; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 14px;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+
+.btn-editar{
+    background-color: #ffc107; 
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-editar:hover{
+    background-color: #e0a800; 
+}
+
+
+.btn-eliminar{
+    background-color: #dc3545; 
+    color: white; 
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-eliminar:hover{
+    background-color: #c82333; 
+}
+
+/* Estilos del contenedor principal */
+.tabla {
+    width: 80%; /* Ancho de la tabla */
+    border-collapse: collapse; /* Elimina el espacio entre bordes de celdas */
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para todas las celdas (datos y encabezados) */
+.tabla th, 
+.tabla td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Estilos para las celdas de encabezado para columna y filas */
+.tabla th {
+    background-color: #3585db; 
+    color: white; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilos para las filas de datos (para efecto cebra/alternado) */
+.tabla tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo diferente para filas pares */
+}
+
+
+.pie table {
+    width: 100%;
+    background-color: #007bff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2vw;
+    color:#ffffff;
+    text-align: center;
+    height: 220px ;
+}

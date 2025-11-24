@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Image/png" href="Imagen huella viva.png">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="Stylemod.css">
+    <link rel="stylesheet" href="styleIndex.css">
+    <script src="https://kit.fontawesome.com/e0a7af0da6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="encabezado">
+        <button id="menu" class="logo-boton">
+            <img src="Imagen huella viva-Photoroom.png" alt="Logo Huellas Vivas" class="logo-img">
+        </button>
+
+        <h1 class="titulo">Clientes</h1>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="close-btn" id="close-sidebar">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+
+        <ul>
+            <li><a href="indexmod.html" class="menu-item">Inicio</a></li>
+            <li><a href="TablaclienteD.html" class="menu-item">Clientes</a></li>
+            <li><a href="TablaMascota.html" class="menu-item">Mascotas</a></li>
+            <li><a href="TablaservicioD.html" class="menu-item">Servicios</a> </li>
+            <li><a href="TablaEmpleadoD.html" class="menu-item">Empleados</a></li>
+            <li><a href="TablaCitaD.html" class="menu-item">Citas</a></li>       
+        </ul>
+    </nav>
+
+    <div class="botones">
+        <div class="barra-busqueda">
+            <input type="text" id="busqueda" placeholder="Buscar Cliente">
+            <button id="btnBuscar" class="boton">Buscar</button>
+
+        </div>
+        <a href="Nuevocliente.html" class="boton">Agregar</a>
+
+    </div>
+
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Numero de telefono</th>
+                <th scope="col">Dirreccion</th>
+                <th scope="col">Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTablaClientes">
+        </tbody>
+    </table>
+    <footer class="pie">
+        <table>
+            <tr>
+                <td>
+                    <i class="fa-regular fa-registered"></i> Huellas Vivas <br>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Av. Carmelo Perez #178 Colonia Jose Vicente Villada <br>
+                    <i class="fa-solid fa-phone"></i> Tel: 5523456789 <br>
+                </td>
+                <td>
+                    <i class="fa-regular fa-copyright"></i> NovaCode <br>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+    <script src="scriptcliente.js"></script>
+    <script src="scriptmod.js"></script>
+</body>
+
+</html>

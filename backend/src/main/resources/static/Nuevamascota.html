@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Image/png" href="Imagen huella viva.png">
+    <title>Nueva Mascota</title>
+    <link rel="stylesheet" href="Stylecl.css">
+    <link rel="stylesheet" href="Stylemod.css">
+</head>
+
+<body>
+
+    <div class="contenedor-formulario">
+        <a href="TablaMascota.html" title="volver">
+            <img src="Imagen huella viva.png" alt="logo Huellas vivas" class="logo">
+        </a>
+        <h2>Nueva Mascota</h2>
+
+        <form action="#" method="POST" id="formularioMascota">
+            <input type="hidden" id="idMascotaHidden" name="id_mascota" value="">
+
+            <div class="grupo-campo">
+                <label for="clienteId">ID Dueño:</label>
+                <input type="number" id="clienteId" name="clienteId" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="nombre" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="Especie">Especie:</label>
+                <select name="especie" id="Especie" required>
+                    <option value="">-- Seleccione una Especie --</option>
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Roedor">Roedor</option>
+                    <option value="Ave">Ave</option>
+                    <option value="Otro">Otro</option>
+                
+                </select>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="Raza">Raza:</label>
+                <select name="raza" id="Raza" required>
+                    <option value="">-- Seleccione una Raza --</option>
+                </select>
+            </div>
+
+
+            <div class="grupo-campo">
+                <label for="FechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="FechaNacimiento" name="fechaNacimiento" required>
+            </div>
+
+
+
+            <div class="grupo-campo">
+                <input type="submit" value="Guardar" id="btnGuardar">
+            </div>
+        </form>
+
+    </div>
+
+    <footer class="pie">
+        <table>
+            <tr>
+                <td>
+                    <i class="fa-regular fa-registered"></i> Huellas Vivas <br>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Av. Carmelo Perez #178 Colonia Jose Vicente Villada <br>
+                    <i class="fa-solid fa-phone"></i> Tel: 5523456789 <br>
+                </td>
+                <td>
+                    <i class="fa-regular fa-copyright"></i> NovaCode <br>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+    <script src="scriptmod.js"></script>
+    <script src="scriptmascota.js"></script>
+</body>
+
+</html>

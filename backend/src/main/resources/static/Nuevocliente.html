@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Image/png" href="Imagen huella viva.png">
+    <title>Nuevo Cliente</title>
+    <link rel="stylesheet" href="Stylecl.css">
+    <link rel="stylesheet" href="Stylemod.css">
+    </head>
+<body>
+
+    <div class="contenedor-formulario">
+        <a href="TablaclienteD.html" title="volver">
+            <img src="Imagen huella viva.png" alt="logo Huellas vivas" class="logo">
+        </a>
+        <h2>Nuevo Cliente</h2>
+        
+       <form id="formularioCliente" action="javascript:void(0)" method="POST">
+            
+        <input type="hidden" id="idClienteHidden">
+            <div class="grupo-campo">
+                <label for="usuarioN">Nombres:</label>
+                <input type="text" id="usuarioN" name="usuarioN" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="usuarioa">Apellido:</label>
+                <input type="text" id="usuarioA" name="usuarioA" required>
+            </div>
+            
+            <div class="grupo-campo">
+                <label for="numero">Numero telefonico:</label>
+                <input type="tel" id="numero" name="numero" maxlength="10" pattern="[0-9]{10}" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="Dirreccion">Dirreccion:</label>
+                <input type="text" id="Dirreccion" name="Dirreccion" required>
+            </div>
+            
+
+            <div class="grupo-campo">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            
+                
+            <div class="grupo-campo">
+                <input type="submit" value="Guardar">
+            </div>
+            </form>
+        
+    </div>
+
+      <footer class="pie">
+        <table>
+            <tr>
+                <td>
+                    <i class="fa-regular fa-registered"></i> Huellas Vivas <br>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Av. Carmelo Perez #178 Colonia Jose Vicente Villada <br>
+                    <i class="fa-solid fa-phone"></i> Tel: 5523456789 <br>
+                </td>
+                <td>
+                    <i class="fa-regular fa-copyright"></i> NovaCode <br>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+     <script src="scriptmod.js"></script>
+     <script src="scriptcliente.js"></script>
+</body>
+</html>

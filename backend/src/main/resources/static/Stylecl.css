@@ -1,0 +1,112 @@
+/* 1. Estilos Globales y de Cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Un gris muy claro para el fondo */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: center;
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    margin: 0;
+}
+
+
+/* 2. Estilo del Contenedor Principal del Formulario */
+.contenedor-formulario {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    width: 100%;
+    max-width: 400px; /* Limita el ancho del formulario */
+    position: relative;
+}
+
+.contenedor-formulario{
+    cursor: pointer;
+}
+
+.logo{
+    position: absolute; /* Posicionamiento absoluto dentro del .contenedor-formulario */
+    top: 25px; /* Ajusta la distancia desde arriba */
+    left: 15px; /* Ajusta la distancia desde la izquierda */
+    width: 90px; /* Tamaño del logo. AJUSTA ESTO SEGÚN EL TAMAÑO DE TU LOGO */
+    height: auto; /* Mantiene la proporción */
+
+}
+
+.contenedor-formulario h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #007bff; /* Línea decorativa debajo del título */
+    padding-bottom: 10px;
+}
+
+/* 3. Estilo de Cada Grupo de Campo (Label + Input) */
+.grupo-campo {
+    margin-bottom: 20px;
+}
+
+.grupo-campo label {
+    display: block; /* Hace que la etiqueta ocupe su propia línea */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.grupo-campo input[type="text"],
+.grupo-campo input[type="tel"],
+.grupo-campo input[type="email"],
+.grupo-campo input[type="number"],
+.grupo-campo input[type="password"],
+.grupo-campo input[type="datetime-local"],
+.grupo-campo input[type="time"],
+.grupo-campo input[type="url"],
+.grupo-campo input[type="checkbox"],
+.grupo-campo input[list="servicioo"],
+.grupo-campo select,
+.grupo-campo input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+    transition: border-color 0.3s;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus {
+    border-color: #007bff; /* Resalta el borde al hacer clic en el campo */
+    outline: none; /* Quita el contorno por defecto del navegador */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* 4. Estilo del Botón de Envío */
+.grupo-campo input[type="submit"] {
+    background-color: #60A5FA; 
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* El botón ocupa todo el ancho */
+}
+
+.grupo-campo input[type="submit"]:hover {
+    background-color: #3B82F6; 
+}
+
+.grupo-campo a {
+    text-decoration: none;
+    display: block; /* Hace que el enlace ocupe todo el ancho del contenedor */
+}
+
+.pie{
+    margin-top: auto;
+    width: 100%;
+
+}

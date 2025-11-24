@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Image/png" href="Imagen huella viva.png">
+    <title>Citas Programadas</title>
+    <link rel="stylesheet" href="Stylemod.css">
+    <link rel="stylesheet" href="styleIndex.css">
+    
+    <script src="https://kit.fontawesome.com/e0a7af0da6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="encabezado">
+        <button id="menu" class="logo-boton">
+            <!-- Asumiendo que esta imagen es el logo que usas -->
+            <img src="Imagen huella viva-Photoroom.png" alt="Logo Huellas Vivas" class="logo-img">
+        </button>
+
+        <h1 class="titulo">Citas Programadas</h1>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="close-btn" id="close-sidebar">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+
+        <ul>
+            <li><a href="indexmod.html" class="menu-item">Inicio</a></li>
+            <li><a href="TablaclienteD.html" class="menu-item">Clientes</a></li>
+            <li><a href="TablaMascota.html" class="menu-item">Mascotas</a></li>
+            <li><a href="TablaservicioD.html" class="menu-item">Servicios</a> </li>
+            <li><a href="TablaEmpleadoD.html" class="menu-item">Empleados</a></li>
+            <li><a href="TablaCitaD.html" class="menu-item">Citas</a></li>
+        </ul>
+    </nav>
+
+    <div class="botones">
+        <!-- Adaptamos la barra de búsqueda para citas -->
+        <div class="barra-busqueda">
+            <input type="text" id="busqueda" placeholder="Buscar Cita">
+            <button id="btnBuscar" class="boton">Buscar</button>
+
+        </div>
+        <!-- Enlace para agregar una nueva cita (crearemos este HTML más tarde) -->
+        <a href="NuevaCita.html" class="boton">Programar Cita</a>
+
+    </div>
+
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th scope="col">Fecha y Hora</th>
+                <th scope="col">Mascota</th>
+                <th scope="col">Veterinario Asignado</th>
+                <th scope="col">Motivo</th>
+                <th scope="col">Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTablaCitas">
+        </tbody>
+    </table>
+
+    <footer class="pie">
+        <table>
+            <tr>
+                <td>
+                    <i class="fa-regular fa-registered"></i> Huellas Vivas <br>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Av. Carmelo Perez #178 Colonia Jose Vicente Villada <br>
+                    <i class="fa-solid fa-phone"></i> Tel: 5523456789 <br>
+                </td>
+                <td>
+                    <i class="fa-regular fa-copyright"></i> NovaCode <br>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+    <script src="scriptcita.js"></script>
+    <script src="scriptmod.js"></script>
+</body>
+
+</html>

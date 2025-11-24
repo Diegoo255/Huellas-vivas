@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Image/png" href="Imagen huella viva.png">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="Stylecl.css">
+    <link rel="stylesheet" href="Stylemod.css">
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+        <a href="login.html" title="Volver al Login"> 
+            <img src="Imagen huella viva.png" alt="logo Huellas vivas" class="logo">
+        </a>
+        <h2>Iniciar Sesión</h2>
+        
+        <form action="/login" method="POST">
+            
+            <div class="grupo-campo">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="grupo-campo error-message">
+                <script>
+                    const urlParams = new URLSearchParams(window.location.search);
+                    if (urlParams.has('error')) {
+                        document.write('<p style="color: red; margin-top: 10px;">Usuario o contraseña incorrectos.</p>');
+                    }
+                </script>
+            </div>
+            
+            <div class="grupo-campo">
+                <input type="submit" value="Acceder">
+            </div>
+            
+        </form>
+    </div>
+
+    <footer class="pie">
+        <table>
+            <tr>
+                <td>
+                    <i class="fa-regular fa-registered"></i> Huellas Vivas <br>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Av. Carmelo Perez #178 Colonia Jose Vicente Villada <br>
+                    <i class="fa-solid fa-phone"></i> Tel: 5523456789 <br>
+                </td>
+                <td>
+                    <i class="fa-regular fa-copyright"></i> NovaCode <br>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+     <script src="scriptmod.js"></script>
+</body>
+</html>

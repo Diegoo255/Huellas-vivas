@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Image/png" href="Imagen huella viva.png">
+    <title>Nueva empleado</title>
+    <link rel="stylesheet" href="Stylecl.css">
+    <link rel="stylesheet" href="Stylemod.css">
+</head>
+
+<body>
+
+    <div class="contenedor-formulario">
+        <a href="TablaEmpleadoD.html" title="volver">
+            <img src="Imagen huella viva.png" alt="logo Huellas vivas" class="logo">
+        </a>
+        <h2>Nueva Empleado</h2>
+
+        <form action="#" method="POST" id="formularioEmpleado">
+            <input type="hidden" id="idEmpleadoHidden" name="id_empleado" value="">
+
+            <div class="grupo-campo">
+                <label for="NombreEm">Nombres:</label>
+                <input type="text" id="NombreEm" name="nombreEm" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="ApellidoEm">Apellido:</label>
+                <input type="text" id="ApellidoEm" name="apellidoEm" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="NumeroEm">Numero telefonico:</label>
+                <input type="tel" id="NumeroEm" name="numeroEm" maxlength="10" pattern="[0-9]{10}" required
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="DirreccionEm">Dirreccion:</label>
+                <input type="text" id="DirreccionEm" name="dirreccionEm" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="FechaNacimientoEm">Fecha de Nacimiento:</label>
+                <input type="date" id="FechaNacimientoEm" name="fechaNacimientoEm" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="RolEm">Rol:</label>
+                <select id="RolEm" name="rolString" required>
+                    <option value="" disabled selected>Seleccione un rol</option>
+                    <option value="Recepcionista">Recepcionista</option>
+                    <option value="Veterinario">Veterinario</option>
+                    <option value="Administrador">Administrador</option>
+                </select>
+            </div>
+
+
+            <div class="grupo-campo">
+                <input type="submit" value="Guardar" id="btnGuardar">
+            </div>
+        </form>
+
+    </div>
+
+    <footer class="pie">
+        <table>
+            <tr>
+                <td>
+                    <i class="fa-regular fa-registered"></i> Huellas Vivas <br>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Av. Carmelo Perez #178 Colonia Jose Vicente Villada <br>
+                    <i class="fa-solid fa-phone"></i> Tel: 5523456789 <br>
+                </td>
+                <td>
+                    <i class="fa-regular fa-copyright"></i> NovaCode <br>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+    <script src="scriptmod.js"></script>
+    <script src="scriptempleado.js"></script>
+</body>
+
+</html>
